@@ -1,4 +1,4 @@
-console.log("YES, I'M HERE");
+console.log("it did work");
 
 const sidebarBookmarkTemplate = document.getElementById('sidebar_bkmk_tmp');
 
