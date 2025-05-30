@@ -1,11 +1,19 @@
 @font-face {
-  font-family: "mynaui";
-  src: url('mynaui.eot?t=1748164646110'); /* IE9*/
-  src: url('mynaui.eot?t=1748164646110#iefix') format('embedded-opentype') /* IE6-IE8 */,
-  url('mynaui.woff2?t=1748164646110') format('woff2'),
-  url('mynaui.woff?t=1748164646110') format('woff'),
-  url('mynaui.ttf?t=1748164646110') format('truetype'),
-  url('mynaui.svg?t=1748164646110') format('svg');
+  font-family: 'mynaui';
+  src: url('https://raw.githubusercontent.com/agencyCRM-com/webapp/refs/heads/main/scripts/MynaUI/mynaui-solid.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/agencyCRM-com/webapp/refs/heads/main/scripts/MynaUI/mynaui-solid.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.naui-icon {
+  font-family: 'mynaui';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 [class^="mynaui-"], [class*=" mynaui-"] {
