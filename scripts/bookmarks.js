@@ -22,24 +22,25 @@ function cloneSidebarBookmarks(bkmkName, bkmkUrl){
 
 };
 
-const { data: user_bkmk, error: user_bkmk_error } = await supabase.rpc('get_user_bookmarks', {
-  member_id_input: window.memberId,
-  location_input: "sidebar",
-});
-
-if (error) {
-  console.error(user_bkmk_error);
-} else {
-
-  const sidebarBookmarkContainer = document.getElementById('sidebar-bkmk-list');
-
-  user_bkmk.forEach(bookmark => {
-
-    cloneSidebarBookmarks(bookmark.bookmark_name, bookmark.url);
-
-  });
-}
-
+(async () => {
+    const { data: user_bkmk, error: user_bkmk_error } = await supabase.rpc('get_user_bookmarks', {
+      member_id_input: window.memberId,
+      location_input: "sidebar",
+    });
+    
+    if (error) {
+      console.error(user_bkmk_error);
+    } else {
+    
+      const sidebarBookmarkContainer = document.getElementById('sidebar-bkmk-list');
+    
+      user_bkmk.forEach(bookmark => {
+    
+        cloneSidebarBookmarks(bookmark.bookmark_name, bookmark.url);
+    
+      });
+    }
+})();
  $("#submit_bookmark").on("click", async function(e) {
    e.preventDefault();
 
